@@ -29,7 +29,7 @@ function performAction() {
   if (locationEnter.value !== "") {
     document.getElementById("search").style.cursor = "pointer";
 
-    fetch(`http://localhost:4000/weather?address=${locationEnter.value}`).then(
+    fetch(`/weather?address=${locationEnter.value}`).then(
       (res) => {
         res.json().then((data) => {
           if (data.error) {
